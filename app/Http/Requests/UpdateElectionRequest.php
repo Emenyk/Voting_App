@@ -2,24 +2,16 @@
 
 namespace App\Http\Requests;
 
-use App\Models\User;
-use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Http\FormRequest;
 
-class VoteFormRequest extends FormRequest
+class UpdateElectionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-
-        return
-
-        Gate::denyIf(fn (User $voter) => $voter->SSN == '')
-                                ? redirect()->back(): true;
-
+        return false;
     }
 
     /**
@@ -30,9 +22,7 @@ class VoteFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-
-            'candidate' => 'required'
-
+            //
         ];
     }
 }

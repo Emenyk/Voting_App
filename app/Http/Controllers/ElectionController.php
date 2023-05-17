@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ElectionFormRequest;
 use App\Models\Election;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreElectionRequest;
+use App\Http\Requests\UpdateElectionRequest;
 
 class ElectionController extends Controller
 {
@@ -27,9 +27,9 @@ class ElectionController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ElectionFormRequest $request)
+    public function store(StoreElectionRequest $request)
     {
-        $validated = $request->validated();
+        //
     }
 
     /**
@@ -51,7 +51,7 @@ class ElectionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Election $election)
+    public function update(UpdateElectionRequest $request, Election $election)
     {
         //
     }

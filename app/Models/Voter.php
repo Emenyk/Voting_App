@@ -6,18 +6,23 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Election extends Model
+
+class Voter extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'position',
-        'date',
-        'candidate'
+        'poll_unit',
+        'unique_Id',
     ];
 
-    public function votes(): hasMany
+    public function vote(): hasMany
     {
         return $this->hasMany(Vote::class);
+    }
+
+    public function comment():HasMany
+    {
+        return $this->hasMany(Comment::class);
     }
 }

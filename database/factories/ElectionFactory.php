@@ -21,7 +21,7 @@ class ElectionFactory extends Factory
         return [
             //
             'position' => 'President',
-            'date' => Date('D-M-Y'),
+            'date' => Date('d-m-Y'),
             'candidate' => fake()->name()
         ];
     }

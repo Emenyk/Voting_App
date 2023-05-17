@@ -2,14 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Election;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Vote>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Voter>
  */
-class VoteFactory extends Factory
+class VoterFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,11 +17,8 @@ class VoteFactory extends Factory
     public function definition(): array
     {
         return [
-            //
-
-
-            
-
+            'polling_unit' => fake()->numberBetween(0, 10),
+            'unique_ID' => fake()->randomNumber()
         ];
     }
 }

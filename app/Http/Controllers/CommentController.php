@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vote;
-use App\Http\Requests\StoreVoteRequest;
-use App\Http\Requests\UpdateVoteRequest;
+use App\Models\Comment;
+use App\Http\Requests\StoreCommentRequest;
+use App\Http\Requests\UpdateCommentRequest;
 
-class VoteController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,12 @@ class VoteController extends Controller
     public function index()
     {
         //
-    } 
+
+        return view('welcome', [
+            'comments' => Comment::all()
+        ]);
+
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,15 +32,17 @@ class VoteController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreVoteRequest $request)
+    public function store(StoreCommentRequest $request)
     {
         //
+
+        $validate = $request->validated();
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Vote $vote)
+    public function show(Comment $comment)
     {
         //
     }
@@ -43,7 +50,7 @@ class VoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vote $vote)
+    public function edit(Comment $comment)
     {
         //
     }
@@ -51,7 +58,7 @@ class VoteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateVoteRequest $request, Vote $vote)
+    public function update(UpdateCommentRequest $request, Comment $comment)
     {
         //
     }
@@ -59,7 +66,7 @@ class VoteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Vote $vote)
+    public function destroy(Comment $comment)
     {
         //
     }

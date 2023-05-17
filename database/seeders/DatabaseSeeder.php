@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\Vote;
 use App\Models\Election;
 use App\Models\User;
+use App\Models\Voter;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,25 +18,21 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $candidates1 = Election::factory()->create();
-        $candidates2 = Election::factory()->create();
-        $candidates3 = Election::factory()->create();
 
-        User::factory(4)->hasvote()->for($candidates1)->create();
-        User::factory(4)->hasvote()->for($candidates2)->create();
-        User::factory(4)->hasvote()->for($candidates3)->create();
+        Voter::factory(4)
+            ->hasvote()
+            ->hascomment()
+        ->create();
 
-        // $John = Election::factory()->create([
-        //     'candidate' => 'John Mmadu',
-        // ]);
 
-        // $Micheal = Election::factory()->create([
-        //     'candidate' => 'Micheal Agwu',
-        // ]);
+        Election::factory()->create();
 
-        // ;
-        // $Micheal->hasVoters(10, Vote::factory());
-        // $John->hasVoters(17, Vote::factory());
+
+
+
+
+
+
 
 
     }

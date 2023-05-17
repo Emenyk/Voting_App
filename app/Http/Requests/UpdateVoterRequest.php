@@ -4,16 +4,14 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ElectionFormRequest extends FormRequest
+class UpdateVoterRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-
-        return auth()->user() ? true : redirect()->back();
-
+        return false;
     }
 
     /**
@@ -24,11 +22,7 @@ class ElectionFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-
-            'position' => 'required',
-            'date' => 'required',
-            'candidate' => 'required',
-
+            //
         ];
     }
 }

@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('votes', function (Blueprint $table) {
+        Schema::create('voters', function (Blueprint $table) {
             $table->id();
-            $table->string('voterSSN')->nullable();
-            $table->string('candidate');
+            $table->string('polling_unit');
+            $table->string('unique_id');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('votes');
+        Schema::dropIfExists('voters');
     }
 };

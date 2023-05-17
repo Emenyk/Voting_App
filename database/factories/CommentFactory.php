@@ -2,14 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Election;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Vote>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Comment>
  */
-class VoteFactory extends Factory
+class CommentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,10 +18,7 @@ class VoteFactory extends Factory
     {
         return [
             //
-
-
-            
-
+            'body' => fake()->text()
         ];
     }
 }

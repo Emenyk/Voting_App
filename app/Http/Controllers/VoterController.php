@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vote;
-use App\Http\Requests\StoreVoteRequest;
-use App\Http\Requests\UpdateVoteRequest;
+use App\Models\Voter;
+use App\Http\Requests\StoreVoterRequest;
+use App\Http\Requests\UpdateVoterRequest;
 
-class VoteController extends Controller
+class VoterController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class VoteController extends Controller
     public function index()
     {
         //
-    } 
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +27,7 @@ class VoteController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreVoteRequest $request)
+    public function store(StoreVoterRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class VoteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vote $vote)
+    public function show(Voter $voter)
     {
         //
     }
@@ -43,7 +43,7 @@ class VoteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vote $vote)
+    public function edit(Voter $voter)
     {
         //
     }
@@ -51,7 +51,7 @@ class VoteController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateVoteRequest $request, Vote $vote)
+    public function update(UpdateVoterRequest $request, Voter $voter)
     {
         //
     }
@@ -59,7 +59,7 @@ class VoteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Vote $vote)
+    public function destroy(Voter $voter)
     {
         //
     }

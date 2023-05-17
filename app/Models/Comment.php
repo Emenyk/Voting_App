@@ -6,21 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Vote extends Model
+class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable =
+    [
         'voter_id',
-        'election_id'
+        'body'
     ];
 
-    public function election(): belongsTo
-    {
-        return $this->belongsTo(Election::class);
-    }
-
-    public function voter(): belongsTo
+    public function voter(): BelongsTo
     {
         return $this->belongsTo(Voter::class);
     }
