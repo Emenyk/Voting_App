@@ -1,8 +1,10 @@
-#image
+#vote_image
 {
-   background-image: url(../images/VotedBackground-1.png);
+   background-image: url(../images/voteElectronic.jpg);
    background-repeat: no-repeat;
    background-size: cover;
+   /* background-position-y: center;
+   background-position-x: center; */
 }
 
 

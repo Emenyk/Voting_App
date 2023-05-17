@@ -10,21 +10,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body class="bg-gray-200">
-    <div class="container mx-auto min-h-screen ">
-        <header class="bg-teal-950  text-teal-100 py-4 flex">
-            <div class="w-1/2 flex justify-center">Vota</div>
-            <nav class="flex w-full justify-around ">
-                <div class="">login</div>
-                <div class="">register</div>
-                <div class="">service</div>
-            </nav>
-        </header>
-        <div id="image" class="h-12 w-full">5</div>
-        <main class="grid grid-cols-1 md:grid-cols-7 ">
-            <section class="bg-teal-950 ">navigations</section>
-            <section class="bg-slate-50 col-span-4 md:min-h-[32rem]">ELection News</section>
-            <section id="comment" class="bg-slate-50 col-span-2 flex flex-col py-10 px-5 text-center space-y-4">
+<body class="bg-slate-50">
+    <div class="container mx-auto min-h-screen space-y-4">
+
+        <main class="grid grid-cols-1  bg-slate-50">
+            {{-- <section class=" ">navigations</section> --}}
+            <section id="vote_image" class=" col-span-4 md:min-h-[32rem]">ELection News</section>
+            {{-- <section id="comment" class="bg-slate-50 col-span-2 flex flex-col py-10 px-5 text-center space-y-4">
                 <h1>Comments</h1>
                 <div>
 
@@ -32,9 +24,18 @@
 
                 </div>
 
-            </section>
+            </section> --}}
         </main>
+        <header class="bg-teal-950  text-teal-100 py-4 flex rounded-full ">
+            <nav class="flex w-full justify-around ">
+                <div class="">Vota</div>
+                <div class="">login</div>
+                <div class="">register</div>
+                <div class="">service</div>
+            </nav>
+        </header>
     </div>
 </body>
 </html>
+
 
