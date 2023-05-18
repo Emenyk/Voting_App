@@ -1,10 +1,17 @@
-#vote_image
-{
-   background-image: url(../images/voteElectronic.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-   /* background-position-y: center;
-   background-position-x: center; */
+body {
+    /* background-image: url(../images/chat-1.jpg); */
+    background-blend-mode: darken;
 }
+
+
+#image {
+
+    background-image: url(../images/ab259b73db2c951aad73957697259905.webp);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+
+}
+
 
 

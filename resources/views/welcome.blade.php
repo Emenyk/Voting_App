@@ -10,30 +10,30 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
-<body class="bg-slate-50">
-    <div class="container mx-auto min-h-screen space-y-4">
+<body class="bg-sky-950 ">
+    <div class="container relative mx-auto min-h-screen ">
 
-        <main class="grid grid-cols-1  bg-slate-50">
-            {{-- <section class=" ">navigations</section> --}}
-            <section id="vote_image" class=" col-span-4 md:min-h-[32rem]">ELection News</section>
-            {{-- <section id="comment" class="bg-slate-50 col-span-2 flex flex-col py-10 px-5 text-center space-y-4">
-                <h1>Comments</h1>
-                <div>
+        <main class="flex w-full absolute h-full">
 
-                    <article class="text-teal-950  py-1 px-2"><span class="inline-blocl h-10 w-10">i</span> 1askdkdkkdkdkkkdk</article>
+            <section id="form" class=" w-1/2 md:min-h-[90%]"></section>
+            <section id="image" class="w-1/2  "></section>
 
-                </div>
-
-            </section> --}}
         </main>
-        <header class="bg-teal-950  text-teal-100 py-4 flex rounded-full ">
-            <nav class="flex w-full justify-around ">
-                <div class="">Vota</div>
-                <div class="">login</div>
-                <div class="">register</div>
-                <div class="">service</div>
-            </nav>
-        </header>
+        <nav class=" absolute  left-3 top-[2%] border border-teal-50 border-r-0 border-b-0 flex  hover:bg-sky-900  rounded-full rounded-r-none hover:rounded-r-full">
+
+
+                <button class="flex gap-5 justify-center text-sky-50 transition-colors">
+                    {{-- <span class="">Vota</span> --}}
+                    <span class="hover:animate-pulse hover:bg-sky-950 rounded-full py-2 px-3 text-sky-50">login</span>
+                    <span class="hover:animate-pulse hover:bg-sky-950 rounded-full py-2 px-3">register</span>
+                    <span class="hover:animate-pulse hover:bg-sky-950 rounded-full py-2 px-3">service</span>
+
+
+                </button>
+
+
+
+        </nav>
     </div>
 </body>
 </html>
