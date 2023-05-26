@@ -31,4 +31,9 @@ Route::middleware('auth')->group(function () {
 
 route::resource('comment', CommentController::class);
 
+    Route::view('/about', 'about');
+    Route::view('/contact', 'contact');
+    Route::view('/services', 'services');
+    Route::view('/team', 'team');
+
 require __DIR__.'/auth.php';
